@@ -1,0 +1,12 @@
+# Session & Memory Management Dependencies
+# MongoDB for conversation storage and session management
+pymongo>=4.5.0
+motor>=3.3.0  # Async MongoDB driver
+
+# Additional dependencies for enhanced memory management
+redis>=4.5.0  # Optional: For session caching
+celery>=5.3.0  # Optional: For background tasks
+
+# Utilities
+python-dotenv>=0.19.0
+typing-extensions>=4.4.0
