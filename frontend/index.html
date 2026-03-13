@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prajwal's AI Portfolio Assistant</title>
+  <meta name="description"
+    content="Chat with Prajwal's AI portfolio assistant to learn about his skills, projects, experience, and certifications." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button class="new-chat-btn" id="newChatBtn">
+        <svg viewBox="0 0 24 24">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        New Chat
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <div class="sidebar-section-title">Suggested Topics</div>
+      <div id="sidebarTopics"></div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-item">
+        <div class="user-avatar">P</div>
+        <span>Prajwal's Portfolio</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Area -->
+  <main class="main">
+    <!-- Top Bar -->
+    <div class="topbar">
+      <button class="menu-toggle" id="menuToggle">
+        <svg viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <span class="model-name">Prajwal's AI Assistant</span>
+      <div class="topbar-nav">
+        <a href="projects.html" class="topbar-projects-link" title="View Projects">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
+          Projects
+        </a>
+      </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container" id="chatContainer">
+      <div class="chat-messages" id="chatMessages">
+        <!-- Welcome screen -->
+        <div class="welcome" id="welcomeScreen">
+          <div class="welcome-logo">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+            </svg>
+          </div>
+          <h1>Prajwal's AI Portfolio</h1>
+          <p>Ask me anything about Prajwal's skills, projects, experience, and certifications. I'm powered by AI and
+            ready to help!</p>
+
+          <div class="suggestions" id="suggestions">
+            <button class="suggestion-chip" data-question="What are Prajwal's top skills?">
+              <span class="chip-icon">💡</span>
+              <span>What are Prajwal's top skills?</span>
+            </button>
+            <button class="suggestion-chip" data-question="Tell me about Prajwal's projects">
+              <span class="chip-icon">🚀</span>
+              <span>Tell me about Prajwal's projects</span>
+            </button>
+            <button class="suggestion-chip" data-question="What is Prajwal's work experience?">
+              <span class="chip-icon">💼</span>
+              <span>What is Prajwal's work experience?</span>
+            </button>
+            <button class="suggestion-chip" data-question="Does Prajwal have any certifications?">
+              <span class="chip-icon">🏆</span>
+              <span>Does Prajwal have any certifications?</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+      <div class="input-wrapper">
+        <div class="input-box" id="inputBox">
+          <textarea id="userInput" rows="1" placeholder="Ask about Prajwal's portfolio..."
+            autocomplete="off"></textarea>
+          <button class="send-btn" id="sendBtn" title="Send message">
+            <svg viewBox="0 0 24 24">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="input-footer">
+          Powered by Groq AI &bull; Llama 3.3 70B
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Error Toast -->
+  <div class="error-toast" id="errorToast"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

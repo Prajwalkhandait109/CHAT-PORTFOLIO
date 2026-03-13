@@ -1,0 +1,7 @@
+Prajwal Khandait is an AI and Machine Learning engineer.
+
+He builds AI applications like chatbots, NLP systems,
+and intelligent automation tools.
+
+He enjoys working with Python, Machine Learning,
+Natural Language Processing and AI systems.

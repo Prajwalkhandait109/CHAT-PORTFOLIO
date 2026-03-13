@@ -1,0 +1,10 @@
+Projects
+
+Video to Text Generator
+A system that converts videos into transcripts.
+
+YouTube Video Summarizer
+Extracts transcript and summarizes YouTube videos.
+
+Mining Industry Law Chatbot
+Chatbot that answers mining regulation queries.

@@ -1,0 +1,15 @@
+Skills
+
+Programming
+Python
+JavaScript
+
+AI/ML
+Machine Learning
+Natural Language Processing
+Transformers
+
+Tools
+Flask
+FastAPI
+Git
